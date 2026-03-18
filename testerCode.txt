@@ -1,0 +1,35 @@
+           Deck Test = new Deck();
+           Test.printDeck();
+           System.out.println();
+           System.out.println(Test.cardsRemaining());
+           for (int i = 0; i < 37; i++) {
+               System.out.println(Test.draw());
+           }
+           for (int i = 0; i < 52; i++) {
+               System.out.println(Test.dealt[i]);
+           }
+            System.out.println(Test.cardsRemaining());
+            System.out.println(Test.isEmpty());
+
+             System.out.println("--------------");
+                System.out.println(HAND[i]);
+                System.out.println(card);
+                System.out.println("--------------");
+
+             Deck testDeck = new Deck();
+            Hand testHand = new Hand(testDeck,4);
+            for (int i = 0; i < 4; i++) {
+            System.out.println(testHand.HAND[i]);
+            }
+            System.out.println();
+            
+            if (testHand.remove(testHand.HAND[2])) {
+                System.out.println("TRUE");
+            }
+            else {
+                System.out.println("FALSE");
+            }
+            for (int i = 0; i < 4; i++) {
+                System.out.println(testHand.HAND[i]);
+            }
+
