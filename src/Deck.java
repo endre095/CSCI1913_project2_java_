@@ -3,7 +3,8 @@ import java.util.Random;
 public class Deck {
     final int size = 52;
     Card[] CARDS = new Card[size];//first thirteen are the set of all spades, then hearts, etc.
-    boolean[] dealt = new boolean[size];
+    //boolean[] dealt = new boolean[size];
+    int nextToDeal = 0;
     Random random = new Random();
 
 
@@ -27,9 +28,7 @@ public class Deck {
                 CARDS[i] = CARDS[j];
                 CARDS[j] = tempCard;
             }
-            for (int i = 0; i < size; i++) {
-                dealt[i] = false;
-            }
+            nextToDeal = 0;
     }
     
     /*
@@ -44,14 +43,10 @@ public class Deck {
     uses the card classes print command to print specific cards from a deck
     */
     public Card draw() {
-        for (int i = 0; i < size; i++) {
-            if (dealt[i] == false){
-                dealt[i] = true;
-                return CARDS[i];
-                }
-            }
-        this.shuffle();
-        return CARDS[0];
+        if (isEmpty()) {
+            shuffle();
+        }
+        return CARDS[nextToDeal++];
     }
     /*
     draws the next available card from the deck, as if it were in a stack,
@@ -59,25 +54,18 @@ public class Deck {
     first card of the newly shuffled deck
     */
     public int cardsRemaining() {
-        int counter = 0;
-        for (int i = 0; i < size; i++) {
-            if (dealt[i] == false){
-                counter++;
-            }
-        }
-        return counter;
+        return size - nextToDeal;
     }
     /*
     iterates through the deck to see how many cards are dealt by adding
     to a counter
     */
     public boolean isEmpty() {
-        int count = this.cardsRemaining();
-        if (count != 52) {
-            return false;
+        if (nextToDeal == size) {
+            return true;
         }
         else {
-            return true;
+            return false;
         }
     }
     /*
