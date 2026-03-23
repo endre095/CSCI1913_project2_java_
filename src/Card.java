@@ -22,6 +22,10 @@ public class Card {
     /*
     this constructor creates the card and specifies its rank and suit
     */
+
+    public int getSuitNum() {
+        return suit;
+    }
     public int getRankNum() { 
         return rank;
     }

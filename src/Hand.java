@@ -3,6 +3,7 @@ public class Hand {
     Card[] HAND;
     Deck deckInstance;
 
+
     public Hand(Deck deck, int size) {
         handSize = size;
         HAND = new Card[handSize];
