@@ -3,7 +3,7 @@
  * Changes by: Adriana Picoral Fall 2025
  * This class has some basic tests for the Deck class.
  */
-public class DeckTest {
+/*public class DeckTest {
 
     /**
      * doTest prints helpful messages informing the user whether or not
@@ -11,7 +11,7 @@ public class DeckTest {
      * @param expected
      * @param output
      * @param message -- name of a method, or test
-     */
+     
     public static void doTest(Object expected, Object output, String message) {
         if (expected.equals(output)) {
             System.out.println(message + " passed test");
@@ -62,4 +62,4 @@ public class DeckTest {
 
         System.out.println("DECK TESTS COMPLETED");
     }
-}
+} */

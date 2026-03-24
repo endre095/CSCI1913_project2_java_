@@ -146,7 +146,8 @@ public class Trick {
         return determineWinner();
     }
     /*
-    this function runs a full trick, which goes counterclockwise as each player places down a card
+
+    (heart of the game) this function runs a full trick, which goes counterclockwise as each player places down a card
     their card are then all compared with playCard and the game is run until isComplete() determins the trick
     has ended
     */

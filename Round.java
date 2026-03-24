@@ -20,6 +20,20 @@ public class Round {
     and the starting player/tricks won.
     */
 
+    public int getPositionOfHighestTricks() {
+        int highest = 0;
+        for (int i = 0; i < tricksWon.length; i++) {
+            if (tricksWon[i] > highest) {
+                highest = i;
+            }
+        }
+        return highest;
+    }
+    /*
+    loops through the tricksWon array and sees who has the most tricks won during this round,
+    returns the position of said player
+    */
+
     public void dealCards() {
         for (int i = 0; i < players.length; i++) {
             players[i].playerHand = new Hand(deck, handSize);
@@ -51,5 +65,10 @@ public class Round {
             startingPlayer = currentTrickWinner;
         }
     }
+    /*
+    this is an extension of the brain of the game, think of this as the spinal cord / nerves maybe?
+    this runs each individual round by creating a new trick and tracking who won each trick, the winner of 
+    a trick is awarded a point and then the winner of the most tricks is given the point for the round
+    */
 
 }
