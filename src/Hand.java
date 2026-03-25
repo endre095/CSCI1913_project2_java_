@@ -3,7 +3,6 @@ public class Hand {
     Card[] HAND;
     Deck deckInstance;
 
-
     public Hand(Deck deck, int size) {
         handSize = size;
         HAND = new Card[handSize];
@@ -11,6 +10,10 @@ public class Hand {
         for (int i = 0; i < size; i++){
             HAND[i] = deck.draw();
         }  
+    }
+    public Hand(int handSize) {
+        this.handSize = handSize;
+        HAND = new Card[handSize];
     }
     /*
     This creates a hand object which consists of a certain number of cards

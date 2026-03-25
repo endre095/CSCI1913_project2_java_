@@ -3,7 +3,6 @@ import java.util.Random;
 public class Deck {
     final int size = 52;
     Card[] CARDS = new Card[size];//first thirteen are the set of all spades, then hearts, etc.
-    //boolean[] dealt = new boolean[size];
     int nextToDeal = 0;
     Random random = new Random();
 

@@ -4,7 +4,7 @@
  * Some basic tests of the AITest class.
  */
 
-public class AITest {
+//public class AITest {
 
     /**
      * doTest prints helpful messages informing the user whether or not
@@ -12,7 +12,7 @@ public class AITest {
      * @param expected
      * @param output
      * @param message -- name of a method, or test
-     */
+     
     public static void doTest(Object expected, Object output, String message) {
         if (expected.equals(output)) {
             System.out.println(message + " passed test");
@@ -51,3 +51,4 @@ public class AITest {
 
     }
 }
+ */

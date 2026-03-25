@@ -1,6 +1,6 @@
 public class Round {
     //each round has 5 tricks
-    private Player[] players;
+    private AI[] players;
     private Deck deck;
     private int trumpSuitNumber;
     private Card trumpCardCopy;
@@ -8,7 +8,7 @@ public class Round {
     private int startingPlayer;
     private int[] tricksWon;
 
-    public Round(Player[] players, int handSize) {
+    public Round(AI[] players, int handSize) {
         this.deck = new Deck();
         this.players = players;
         this.handSize = handSize;
@@ -55,7 +55,7 @@ public class Round {
         dealCards();
         setTrumpCard();
 
-        System.out.println("Trump card: " + trumpCardCopy.toString());
+        //System.out.println("Trump card: " + trumpCardCopy.toString());
 
         for (int i = 0; i < handSize; i++) {
             Trick currentTrick = new Trick(players, trumpSuitNumber, startingPlayer);
