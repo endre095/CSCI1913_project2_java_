@@ -16,31 +16,39 @@ public class Round {
         this.startingPlayer = 0;
     }
     /*
-    constructs the object needed to store a round, including the current deck, players, size of hand
-    and the starting player/tricks won.
-    */
+     * constructs the object needed to store a round, including the current deck,
+     * players, size of hand
+     * and the starting player/tricks won.
+     */
 
     public int getPositionOfHighestTricks() {
-        int highest = 0;
+        int highestTricks = -1; 
+        int highestIndex = -1; 
+
         for (int i = 0; i < tricksWon.length; i++) {
-            if (tricksWon[i] > highest) {
-                highest = i;
+            if (tricksWon[i] > highestTricks) {
+                highestTricks = tricksWon[i];
+                highestIndex = i;
             }
         }
-        return highest;
+        return highestIndex;
     }
     /*
-    loops through the tricksWon array and sees who has the most tricks won during this round,
-    returns the position of said player
-    */
+     * loops through the tricksWon array and sees who has the most tricks won during
+     * this round,
+     * returns the position of said player
+     */
 
     public void dealCards() {
+        this.deck = new Deck();
         for (int i = 0; i < players.length; i++) {
             players[i].playerHand = new Hand(deck, handSize);
         }
     }
-    /* 
-    deals cards to all players by giving them a new hand based on the size of hand required in constructor
+    
+    /*
+     * deals cards to all players by giving them a new hand based on the size of
+     * hand required in constructor
      */
     public void setTrumpCard() {
         this.trumpCardCopy = deck.draw();
@@ -48,8 +56,8 @@ public class Round {
     }
 
     /*
-    sets the trump card for the entire round
-    */
+     * sets the trump card for the entire round
+     */
 
     public void runRound() {
         dealCards();
@@ -66,9 +74,12 @@ public class Round {
         }
     }
     /*
-    this is an extension of the brain of the game, think of this as the spinal cord / nerves maybe?
-    this runs each individual round by creating a new trick and tracking who won each trick, the winner of 
-    a trick is awarded a point and then the winner of the most tricks is given the point for the round
-    */
+     * this is an extension of the brain of the game, think of this as the spinal
+     * cord / nerves maybe?
+     * this runs each individual round by creating a new trick and tracking who won
+     * each trick, the winner of
+     * a trick is awarded a point and then the winner of the most tricks is given
+     * the point for the round
+     */
 
 }

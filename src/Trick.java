@@ -118,9 +118,9 @@ public class Trick {
         Card cardToBePlayed = currentPlayer.getPlay(currentPlayer.playerHand.HAND[0], this);
 
         for (int i = 0; i < currentHand.HAND.length; i++) {
-            Card c = currentHand.HAND[i]; // find valid card
-            if (c != null && isValid(c, currentHand)) {
-                cardToBePlayed = c;
+            Card tempCard = currentHand.HAND[i]; // find valid card
+            if (tempCard != null && isValid(tempCard, currentHand)) {
+                cardToBePlayed = tempCard;
                 break;
             }
         }

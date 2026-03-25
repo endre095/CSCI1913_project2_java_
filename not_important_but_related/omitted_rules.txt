@@ -1,0 +1,23 @@
+rules that were omitted because they were challenging/unnessary to complete the game:
+#### Folding
+      - A player may only fold before any turns are played after the trump card is drawn for the round.
+      - A fold must be done before anyone completes their turn, to ["knock"](#knocking)
+        means to stay in the round, to "pass" is to sit out the round.
+      - No tricks may be participated in by a player who folded,
+        for the duration of the round they folded in.
+      - You may not lose points if you have folded.
+    #### Knocking
+      - If you knocked, you must play all 5 tricks in that round.
+      - The player may gain points or lose them in this round.
+      - Knocking must be done in a clockwise order.
+      - If only one person knocks, they win that round.
+      - At least one player must knock per round.
+
+       - Players then choose to either fold/knock.
+       - Players choose to either knock or fold before any cards are played.
+       - All other knocking players neither gain nor lose points.
+       - A player may choose to "knock" which is to stay in the round and play the 
+       entirety of the round. A player can also fold, in which they are unable to 
+       participate in any of the tricks of any round. A player can only choose to knock or fold right
+        after the trump card has been drawn.
+       - The round consists of five tricks played by the players who knocked.

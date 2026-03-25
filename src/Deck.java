@@ -4,7 +4,7 @@ public class Deck {
     final int size = 52;
     Card[] CARDS = new Card[size];//first thirteen are the set of all spades, then hearts, etc.
     int nextToDeal = 0;
-    Random random = new Random();
+    Random random = new Random(); 
 
 
     public Deck (){
