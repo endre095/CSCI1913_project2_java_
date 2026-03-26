@@ -97,10 +97,11 @@ public class CardGameMatch {
     /*
      * this function prints the win rate array to the screen with a message
      */
-    public void calculateWinRateArray() {
+    public double[] calculateWinRateArray() {
         for (int i = 0; i < pointsArray.length; i++) {
             winRateArray[i] = (double) pointsArray[i] / (double) roundNum;
                 }
+            return winRateArray;
     }
     /*
         * this function prints the win rate array to the screen with a message

@@ -9,6 +9,7 @@ public class Main {
                 AI[] testPlayers = {testPlayer1, testPlayer2, testPlayer3};
                 Tournament testT = new Tournament(testPlayers, trialNumber, handSize);
                 testT.runTournament();
+                testT.printTrueWinRateArray();
                 /*
                  * To play tournaments against different players, use different combinations of
                  * tournaments with different testPlayer arrays
