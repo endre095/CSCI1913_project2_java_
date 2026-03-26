@@ -22,6 +22,18 @@ public class Tournament {
      * what conserves the probability)
      */
 
+    
+    
+    /* public void runAllTests(){
+        
+
+        //default ai vs smallest
+        for (int i = 0; i < this.numberOfTrials; i++) {
+            player1 = new AI();
+        }
+        
+    } */
+
     public void runTournament() {
         for (int i = 0; i < this.numberOfTrials; i++) {
             CardGameMatch game = new CardGameMatch(players);
@@ -62,7 +74,8 @@ public class Tournament {
     }*/
 
     /*
-    runs the tournament with the specified number of trials, then finds the win rates and
-    prints them to the screen
+    * runs the tournament with the specified number of trials, then finds the win
+    * rates and
+    * prints them to the screen
     */
 }
