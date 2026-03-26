@@ -38,9 +38,9 @@ public class Tournament {
     public void calculateTrueWinRate(int numTrials, double[] trueWinRateArray) {
         for (int j = 0; j < players.length; j++) {
             trueWinRateArray[j] /= (double) numTrials;
+            }
         }
-    }
-    
+
     /*
      * this function does the final calculation, which is simply just the total of
      * all percentages divided by the number of games.
@@ -67,15 +67,28 @@ public class Tournament {
     */
 
     public void runTournament() {
-        for (int i = 0; i < this.numberOfTrials; i++) {
+        final int gamesPerTournament = 100;
+        for (int i = 0; i < gamesPerTournament; i++) {
             CardGameMatch game = new CardGameMatch(players);
             game.runGame();
-            game.calculateWinRateArray();
-            this.appendTrueWinRate(game.calculateWinRateArray());
+            double[] tempArray = game.calculateWinRateArray();
+            this.appendTrueWinRate(tempArray);
             game.printWinRateArray();
-
+            
         }
-        
+    }
+
+    public void runArbitraryTournament(int input) {
+        for (int i = 0; i < input; i++) {
+            runTournament();
+            printTrueWinRateArray();
+            clearWinRateArray();
+        }
+        int lowerBound = 10;
+        int upperBound = 46;
+
+        System.out.println("Lower bound of rounds played: " + lowerBound * 100 * input);
+        System.out.println("Upper bound of rounds played: " + upperBound * 100 * input);
     }
     /*
      * executes the tournament and displays the stats for each round/game

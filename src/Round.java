@@ -59,6 +59,10 @@ public class Round {
      * sets the trump card for the entire round
      */
 
+    public int[] getTricksWon() {
+        return this.tricksWon;
+    }
+
     public void runRound() {
         dealCards();
         setTrumpCard();

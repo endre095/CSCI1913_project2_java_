@@ -68,9 +68,9 @@ public class CardGameMatch {
 
     public void printGameWinner() {
         int winnerIndex = getHighestPosition();
-        System.out.println((PLAYERS[winnerIndex].toString() ) + " won the game with " + pointsArray[winnerIndex] + " points in "
-        + (this.roundNum + 1) + " rounds.");
-        System.out.println("Thanks for playing!");
+        //System.out.println((PLAYERS[winnerIndex].toString() ) + " won the game with " + pointsArray[winnerIndex] + " points in "
+        //+ (this.roundNum + 1) + " rounds.");
+        //System.out.println("Thanks for playing!");
         winnerPosition = 0;
 
     }
@@ -88,10 +88,25 @@ public class CardGameMatch {
             pointsArray[winnerPosition] += 1;
            
 
-            System.out.println("Round over, point goes to " + PLAYERS[winnerPosition].toString() + ": " + (this.winnerPosition +1));
+            //System.out.println("Round over, point goes to " + PLAYERS[winnerPosition].toString() + ": " + (this.winnerPosition +1));
             roundNum++;
+            resetTricksWon(currentRound);
         }
         printGameWinner();
+
+    }
+    /*
+     * this function runs the game by instantiating a round objkect with the players
+     * and hand sizes required,
+     * then running the round and adding the winner's points for every iteration of
+     * the while loop, which only resolves
+     * when a player reaches the max amount of points in a game (which is 10)
+     */
+
+    public void resetTricksWon(Round currentRound) {
+        for (int j = 0; j < PLAYERS.length;j++) {
+            (currentRound.getTricksWon())[j] = 0;
+        }
     }
    
     /*
@@ -108,9 +123,12 @@ public class CardGameMatch {
         */
 
     public void printWinRateArray() {
+        //double total = 0;
         for (int i = 0; i < winRateArray.length; i++) {
             System.out.println(PLAYERS[i].toString() + "'s winrate: " + winRateArray[i]);
+            //total += winRateArray[i];
         }
+        //System.out.println(total);
     }
     /*
         * this function prints the win rate array to the screen with a message
