@@ -23,9 +23,11 @@ public class AITest {
     }
 
     public static void main(String[] args) {
-        AI randomAI = new AI();
-        AI smallestAI = new SmallestCardAI();
-        AI biggestAI = new BiggestCardAI();
+        int handSize = 5;
+        Deck testDeck = new Deck();
+        SmallestCardAI smallestAI = new SmallestCardAI(testDeck, handSize);
+        BiggestCardAI biggestAI = new BiggestCardAI(testDeck, handSize);
+        AI randomAI = new AI(testDeck, handSize);
 
         doTest("Random Card AI", randomAI.toString(), "hand.getSize()");
         doTest("Smallest Card AI", smallestAI.toString(), "hand.getSize()");
@@ -36,10 +38,10 @@ public class AITest {
         // I can't see a way to fix that (without providing you with some of the solution).
         Deck deck = new Deck();
         Hand hand = new Hand(deck, 5);
-        CardPile pile = new CardPile(deck.draw());
+        //CardPile pile = new CardPile(deck.draw());
         AI testAI = smallestAI; // change this to be the different AIs
-
-        System.out.println("Top card is: "+pile.getTopCard());
+        
+        System.out.println("Top card is: "+ pile.getTopCard());
 
         System.out.println("Hand is: ");
         for (int i=0; i < hand.getSize(); i++) {

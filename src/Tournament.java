@@ -22,18 +22,6 @@ public class Tournament {
      * what conserves the probability)
      */
 
-    
-    
-    /* public void runAllTests(){
-        
-
-        //default ai vs smallest
-        for (int i = 0; i < this.numberOfTrials; i++) {
-            player1 = new AI();
-        }
-        
-    } */
-
     public void runTournament() {
         for (int i = 0; i < this.numberOfTrials; i++) {
             CardGameMatch game = new CardGameMatch(players);
@@ -46,36 +34,4 @@ public class Tournament {
          * executes the tournament and displays the stats for each game
          */
     }
-    /*public void calculateTournamentStats(CardGameMatch game) {
-        this.totalRoundsPlayed += game.getRoundNum();
-        for (int i = 0; i < players.length; i++) {
-            tournamentStats[i] += 
-        }
-    }*/
-/* 
-    public void runBasicTournament() {
-        AI temp1;
-        SmallestCardAI temp2;
-        BiggestCardAI temp3;
-        CardGameMatch tempGame;
-
-        for (int i = 0; i < this.numberOfTrials; i++) {
-            temp1 = new AI(masterDeck, sizeOfHand);
-            temp2 = new SmallestCardAI(masterDeck, sizeOfHand);
-            temp3 = new BiggestCardAI(masterDeck, sizeOfHand);
-            AI[] players = { temp1, temp2, temp3 };
-            tempGame = new CardGameMatch(players);
-            tempGame.runGame();
-
-        }
-        currentMasterGame.calculateWinRateArray();
-        currentMasterGame.printWinRateArray();
-        
-    }*/
-
-    /*
-    * runs the tournament with the specified number of trials, then finds the win
-    * rates and
-    * prints them to the screen
-    */
 }
