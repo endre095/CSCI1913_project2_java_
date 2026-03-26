@@ -68,9 +68,9 @@ public class CardGameMatch {
 
     public void printGameWinner() {
         int winnerIndex = getHighestPosition();
-        //System.out.println((PLAYERS[winnerIndex].toString() ) + " won the game with " + pointsArray[winnerIndex] + " points in "
-        //+ (this.roundNum + 1) + " rounds.");
-        //System.out.println("Thanks for playing!");
+        System.out.println((PLAYERS[winnerIndex].toString() ) + " won the game with " + pointsArray[winnerIndex] + " points in "
+        + (this.roundNum + 1) + " rounds.");
+        System.out.println("Thanks for playing!");
         winnerPosition = 0;
 
     }
@@ -130,7 +130,7 @@ public class CardGameMatch {
         }
         //System.out.println(total);
     }
-    /*
+        /*
         * this function prints the win rate array to the screen with a message
         */
 } 

@@ -62,6 +62,9 @@ public class Round {
     public int[] getTricksWon() {
         return this.tricksWon;
     }
+    /*
+     * returns tricks won
+     */
 
     public void runRound() {
         dealCards();

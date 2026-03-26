@@ -5,8 +5,8 @@ public class Main {
                 Deck testDeck = new Deck();
                 SmallestCardAI testPlayer1= new SmallestCardAI(testDeck, handSize);
                 BiggestCardAI testPlayer2 = new BiggestCardAI(testDeck, handSize);
-                AI testPlayer3 = new AI(testDeck, handSize);
-                AI[] testPlayers = {testPlayer1, testPlayer2, testPlayer3};
+                //AI testPlayer3 = new AI(testDeck, handSize);
+                AI[] testPlayers = {testPlayer1, testPlayer2};
                 Tournament testT = new Tournament(testPlayers, trialNumber, handSize);
                 testT.runArbitraryTournament(50);
                 

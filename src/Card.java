@@ -20,8 +20,8 @@ public class Card {
         }
     }
     /*
-    this constructor creates the card and specifies its rank and suit
-    */
+     * this constructor creates the card and specifies its rank and suit
+     */
 
     public int getSuitNum() {
         return suit;
@@ -39,7 +39,7 @@ public class Card {
         return (RANKS[rank-1] + " of " + SUITS[suit-1]);
     }
     /*
-    all 4 above functions are self-explanatory
+    neccesary getters/setters
     */
     @Override
     public boolean equals(Object obj){
