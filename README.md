@@ -9,7 +9,7 @@ Game: Köpknack
 
 ### RULES/GUIDELINES -
 
-*Kopknack is a Swedish card game which dates back to the early 19th century. The objective of this game is to get to 10 points, while every player starts out with zero points. Each round of the game, you are able to either win a point, or stay at the same amount of points. A round consists of 5 tricks, in which the tricks are the real "game" part of Kopknack. At the start of a round a trump card is drawn, its suit is the trump suit, and will remain so for the rest of the current round. A player may choose to "knock" which is to stay in the round and play the entirety of the round. A player can also fold, in which they are unable to participate in any of the tricks of any round. A player can only choose to knock or fold right after the trump card has been drawn. A trick is a sequence of card placements done by the players participating in the round's tricks. The sequence goes clockwise from the dealer. Players are to play certain cards based on certain criteria which follows the rules named: The trump rule and the lead suit rule. After a round concludes, a point is awarded to the winner, no one else recieves points. Once a player reaches 10 points they have won the game.*
+*Kopknack is a Swedish card game which dates back to the early 19th century. The objective of this game is to get to 10 points, while every player starts out with zero points. Each round of the game, you are able to either win a point, or stay at the same amount of points. A round consists of 5 tricks, in which the tricks are the real "game" part of Kopknack. At the start of a round a trump card is drawn, its suit is the trump suit, and will remain so for the rest of the current round. A trick is a sequence of card placements done by the players participating in the round's tricks. The sequence goes clockwise from the dealer. Players are to play certain cards based on certain criteria which follows the rules named: The trump rule and the lead suit rule. After a round concludes, a point is awarded to the winner, no one else recieves points. Once a player reaches 10 points they have won the game.*
 
 ## Game mechanics
   - Deck: standard (52 cards)
@@ -18,8 +18,6 @@ Game: Köpknack
   - ### Round:
     - A round begins after each player is dealt five cards.
     - A trump card is revealed; its suit defines the trump suit for the round.
-    - Players choose to either knock or fold before any cards are played.
-    - The round consists of five tricks played by the players who knocked.
     - After all tricks are completed, the player with the most trick wins wins the round.
     - The round winner receives one point.
     - The dealer rotates clockwise after the round ends.
@@ -55,19 +53,7 @@ Game: Köpknack
           the highest card of the lead suit.
     - By winning a trick they collect that trick's cards and lead the next 
           trick.
-    #### Folding
-      - A player may only fold before any turns are played after the trump card is drawn for the round.
-      - A fold must be done before anyone completes their turn, to ["knock"](#knocking)
-        means to stay in the round, to "pass" is to sit out the round.
-      - No tricks may be participated in by a player who folded,
-        for the duration of the round they folded in.
-      - You may not lose points if you have folded.
-    #### Knocking
-      - If you knocked, you must play all 5 tricks in that round.
-      - The player may gain points or lose them in this round.
-      - Knocking must be done in a clockwise order.
-      - If only one person knocks, they win that round.
-      - At least one player must knock per round.
+
 ## Start of game
   - Cards are shuffled.
   - If the deck is ever empty (zero available cards to draw), it is to be reshuffled.
@@ -79,7 +65,6 @@ Game: Köpknack
   - Every player is dealt five cards at once (5 to first, 5 to second, etc.) once per round.
   - The following card from the deck is dealt face up, this is the trump card,
     there is only one trump card dealt per round.
-  - Players then choose to either fold/knock.
   - Cards may only be used in the same round they are dealt.
   - There is only one deck ever in use at a time during the round.
   - Only these first five cards are dealt to each player during the round, 
@@ -88,10 +73,11 @@ Game: Köpknack
   - Each round played consists of five tricks (original number of cards given).
   - The player with the most number of trick wins at the end of the round wins
     the round, and receives one point.
-  - All other knocking players neither gain nor lose points.
   - The first player to reach 10 points by winning rounds, wins the game!
 
   
+
+
 
 
 
