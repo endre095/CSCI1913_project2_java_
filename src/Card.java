@@ -39,7 +39,7 @@ public class Card {
         return (RANKS[rank-1] + " of " + SUITS[suit-1]);
     }
     /*
-    all 4 above functions are relatively self-explanatory
+    all 4 above functions are self-explanatory
     */
     @Override
     public boolean equals(Object obj){
