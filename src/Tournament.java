@@ -1,11 +1,11 @@
 public class Tournament {
+    public static int totalRoundsPlayed;
     int numberOfTrials;
     int sizeOfHand;
     AI[] players;
     CardGameMatch currentMasterGame;
     final String[] playerTypeArray = {"AI", "Smallest Card AI", "Biggest Card AI" };
     double[] tournamentStats;
-    int totalRoundsPlayed;
     double[] trueWinRate;
 
     public Tournament(AI[] players, int trials, int sizeOfHand) {
@@ -48,7 +48,7 @@ public class Tournament {
 
     public void printTrueWinRateArray() {
         for (int j = 0; j < players.length; j++) {
-            System.out.println(players[j].toString() + "'s true win rate: " + trueWinRate[j] + "%.");
+            System.out.println("|" + players[j].toString() + "'s true win rate: " + trueWinRate[j] + "%.");
         }
     }
     /*
@@ -63,8 +63,8 @@ public class Tournament {
         }
     }
     /*
-    sets all of trueWinRate's values to 0
-    */
+     * sets all of trueWinRate's values to 0
+     */
 
     public void runTournament() {
         final int gamesPerTournament = 100;
@@ -77,20 +77,41 @@ public class Tournament {
             
         }
     }
+    /*
+     * runs the tournament by creating 100 games, which all are played and the
+     * scores are appended
+     * to the TrueWinRate array which is used to find the final statistics
+     */
+
+    public void calculateAndPrintTournamentStatistics(int input) { 
+        System.out.println("|********************************************************");
+        printTrueWinRateArray();
+        clearWinRateArray();
+        int lowerBound = 10 * 100 * input;
+        int upperBound = ((players.length * 9) + 1) * 100 * input;
+        System.out.println("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("|" +"Total rounds played: " + totalRoundsPlayed);
+        System.out.println("|" +"Lower bound of possible rounds played: " + lowerBound);
+        System.out.println("|" +"Upper bound of possible rounds played: " + upperBound);
+        System.out.println("|********************************************************");
+    }
+    /*
+     * prints all info related to the end of a tournament, as well as finding the
+     * upper and lower
+     * bounds of games played, which is just the amount of (players * num_to_win-1)
+     * + 1, otherwise just
+     * formatting stuff to make it look nice
+     */
 
     public void runArbitraryTournament(int input) {
         for (int i = 0; i < input; i++) {
             runTournament();
-            printTrueWinRateArray();
-            clearWinRateArray();
+            calculateAndPrintTournamentStatistics(input);
         }
-        int lowerBound = 10;
-        int upperBound = 46;
-
-        System.out.println("Lower bound of rounds played: " + lowerBound * 100 * input);
-        System.out.println("Upper bound of rounds played: " + upperBound * 100 * input);
     }
     /*
-     * executes the tournament and displays the stats for each round/game
+     * calls the above two functions to run a tournament which displays its stats
+     * afterwords
      */
+    
 }

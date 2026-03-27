@@ -79,6 +79,7 @@ public class Round {
             tricksWon[currentTrickWinner] += 1;
             startingPlayer = currentTrickWinner;
         }
+        Tournament.totalRoundsPlayed++;
     }
     /*
      * this is an extension of the brain of the game, think of this as the spinal

@@ -1,4 +1,11 @@
-public class BiggestCardAI extends AI {
+public class BiggestCardAI extends AI { 
+    /*
+     * all of the functions in this class are nearly identical to SmallestCardAI (See class for references)
+     * besides getPlay(), which just gets the opposite of what the other class
+     * would,
+     * the functions behave the same way and complete the same actions
+     */
+
     private String name = "Biggest Card AI";
     Hand bigAIhand;
     int handSize = super.handSize;

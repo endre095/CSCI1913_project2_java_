@@ -5,10 +5,13 @@ public class Main {
                 Deck testDeck = new Deck();
                 SmallestCardAI testPlayer1= new SmallestCardAI(testDeck, handSize);
                 BiggestCardAI testPlayer2 = new BiggestCardAI(testDeck, handSize);
-                //AI testPlayer3 = new AI(testDeck, handSize);
-                AI[] testPlayers = {testPlayer1, testPlayer2};
+                AI testPlayer3 = new AI(testDeck, handSize);
+                SmallestCardAI testPlayer4 = new SmallestCardAI(testDeck, handSize);
+                BiggestCardAI testPlayer5 = new BiggestCardAI(testDeck, handSize);
+                AI testPlayer6 = new AI(testDeck, handSize);
+                AI[] testPlayers = {testPlayer1, testPlayer2, testPlayer3, testPlayer4, testPlayer5, testPlayer6};
                 Tournament testT = new Tournament(testPlayers, trialNumber, handSize);
-                testT.runArbitraryTournament(50);
+                testT.runArbitraryTournament(5);
                 
                 /*
                  * To play tournaments against different players, use different combinations of
@@ -35,7 +38,13 @@ public class Main {
                  * to see more indepth about the actual logic of this project, there is a bunch
                  * of system.out
                  * which is commented out, undoing this will reveal how each step takes place
+                 * 
+                 * after a little extra testing, this game seemingly has a bias towards the
+                 * dealer, the player who goes first always usually
+                 * wins most games, as they can set the lead suit, if there was no lead suit
+                 * setting i think the spread would be more related to the cards being picked
                  */
+
 
         }
 
