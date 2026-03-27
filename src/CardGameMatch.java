@@ -1,5 +1,5 @@
 public class CardGameMatch {
-    final int MAX_POINTS = 10; //these can be changed whenever
+    static int MAX_POINTS = 10; //these can be changed whenever
     final int HAND_SIZE;
     private int roundNum = 0;
     AI[] PLAYERS;

@@ -25,26 +25,29 @@ public class Main {
                  * it was kind of curious to get my pecentages to work out in my favor, per game
                  * there are atleast 10 round because each player needs 10 points to win, since
                  * these
-                 * two dont match up, i had to normalize each round, then each game, this allows
+                 * two dont match up, i had to normalize each round, then normalize each game,
+                 * this allows
                  * me to now specif the number of trials of each set of 100 games, which gives
                  * the correct
                  * percentages, so when you are running "1" trial, it is really an unspecified
-                 * random # of rounds >= 10 * 100 games * num of trials specified. this means
+                 * random # of rounds >= 10 * 100 games * num_of_trials specified. this means
                  * the
                  * true win rate given are pretty accurate and cant be too far off the real
                  * values as they
-                 * approach an infinite number of trials
+                 * approach an infinite number of trials, if input more than 1000 trials this
+                 * game slows down significantly as the number of true rounds played is much
+                 * greater
                  * 
                  * to see more indepth about the actual logic of this project, there is a bunch
                  * of system.out
                  * which is commented out, undoing this will reveal how each step takes place
+                 * during runtime
                  * 
                  * after a little extra testing, this game seemingly has a bias towards the
                  * dealer, the player who goes first always usually
                  * wins most games, as they can set the lead suit, if there was no lead suit
                  * setting i think the spread would be more related to the cards being picked
                  */
-
 
         }
 

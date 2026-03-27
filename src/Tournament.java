@@ -83,12 +83,12 @@ public class Tournament {
      * to the TrueWinRate array which is used to find the final statistics
      */
 
-    public void calculateAndPrintTournamentStatistics(int input) { 
+    public void calculateAndPrintTournamentStatistics(int input, int pointsToWin) { 
         System.out.println("|********************************************************");
         printTrueWinRateArray();
         clearWinRateArray();
         int lowerBound = 10 * 100 * input;
-        int upperBound = ((players.length * 9) + 1) * 100 * input;
+        int upperBound = ((players.length*pointsToWin) - 1) * 100 * input;
         System.out.println("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("|" +"Total rounds played: " + totalRoundsPlayed);
         System.out.println("|" +"Lower bound of possible rounds played: " + lowerBound);
@@ -106,12 +106,14 @@ public class Tournament {
     public void runArbitraryTournament(int input) {
         for (int i = 0; i < input; i++) {
             runTournament();
-            calculateAndPrintTournamentStatistics(input);
+            int pointsToWin = CardGameMatch.MAX_POINTS;
+            calculateAndPrintTournamentStatistics(input, pointsToWin);
         }
     }
     /*
      * calls the above two functions to run a tournament which displays its stats
-     * afterwords
+     * afterwords, pointsToWin is created from CardGameMatch's max_points, which can
+     * be changed anytime and the game will run the same (in CardGameMatch at top of class)
      */
     
 }
