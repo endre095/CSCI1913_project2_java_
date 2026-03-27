@@ -25,7 +25,7 @@ public class Main {
                  * it was kind of curious to get my pecentages to work out in my favor, per game
                  * there are atleast 10 round because each player needs 10 points to win, since
                  * these
-                 * two dont match up, i had to normalize each round, then normalize each game,
+                 * two dont match up, i had to  normalize each game, which has a random number of rounds,
                  * this allows
                  * me to now specif the number of trials of each set of 100 games, which gives
                  * the correct
